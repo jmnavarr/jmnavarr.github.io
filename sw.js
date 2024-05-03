@@ -3,5 +3,5 @@ self.addEventListener('push', (e) => {
     const obj = e.data.json();
     console.log("obj", obj);
 
-    self.registration.showNotification('test message', {});
+    self.registration.showNotification(obj.body, {});
 });
