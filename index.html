@@ -8,6 +8,7 @@ Github Pages Repo
 <h1>Github Pages Repo</h1>
 
 <button onclick="subscribe()">Subscribe</button>
+<button onclick="unsubscribe()">Un-Subscribe</button>
 
 <script>
     addEventListener('load', async() => {
@@ -22,6 +23,22 @@ Github Pages Repo
             applicationServerKey: 'BF_lG-icS6HUkP_RD2_3Bob3iGw4_d875GJwudFbQ_I-zHfS3mBkY8jtq132iExxUdIrUSS7zg5FI9UprnY4Xzk'
         });
         console.log(JSON.stringify(push));
+    }
+
+    async function unsubscribe() {
+        navigator.serviceWorker.ready.then((reg) => {
+            reg.pushManager.getSubscription().then((subscription) => {
+                subscription
+                .unsubscribe()
+                .then((successful) => {
+                    console.log("subscription", subscription);
+                    console.log("You've successfully unsubscribed");
+                })
+                .catch((e) => {
+                    console.error("Error: unsubscribing failed");
+                });
+            });
+        });
     }
 
 </script>
