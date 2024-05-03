@@ -8,11 +8,15 @@ let vapidKeys = {"publicKey":"BF_lG-icS6HUkP_RD2_3Bob3iGw4_d875GJwudFbQ_I-zHfS3m
 
 push.setVapidDetails('mailto:juan.m.navarro@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/cyK4nIMGNao:APA91bE7GTJ2anpO-BEBMzmp_af5EqOQ68QCuwh4lnMPJTwHA8IFDT55WyGU_UgAlmsM9ZJ6bD2DoE3GJq1Uv2IAlvk4y88hxr2S7kyps6PiRMzlJU8tJOaVKQks8WyemzMRQocKysmS","expirationTime":null,"keys":{"p256dh":"BMxgP2seOUOb6iKwu0BHExh4TI9yncLzDQIDAO9DjIfWQvvzqPRuLK_qEjPlnZ3IUPFj6yxdEwBaWlzEwMepGHQ","auth":"0-RAGJwm0Yj_jmZ45vta9g"}};
+let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/d9CK3T9bWuA:APA91bGf7dv7pSzap0caMn9SUrpSY8wathwmV991A4d8OjUsLUDqIYDPn2fAkiA3-mEbe2OQDh2l4vGY2480s8ASy2721uiKFMz-xw-O9RTeimDTpoKTlU49ROs1WOih3G2AKdGRpPK-","expirationTime":null,"keys":{"p256dh":"BAn1mmGEqxWXDHXmpEkD5b40SQvM59iO8gb6-m89pwxJGszIfLEFY447hTen4R_9EjKqGRKhNEt8pc5dxQ_XIB0","auth":"JU4ggdjCmt7Wqhoxw-lcHw"}};
 
 const message = {
     title: "Battery alert",
     body: "Battery level < 5%"
 }
 
-push.sendNotification(sub, JSON.stringify(message));
+const res = push.sendNotification(sub, JSON.stringify(message));
+
+res.then((r) => {
+    console.log("result", r);
+});
