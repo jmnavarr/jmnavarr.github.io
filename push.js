@@ -8,6 +8,6 @@ let vapidKeys = {"publicKey":"BF_lG-icS6HUkP_RD2_3Bob3iGw4_d875GJwudFbQ_I-zHfS3m
 
 push.setVapidDetails('mailto:juan.m.navarro@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/dKzyeGFe5Wo:APA91bFWfqXYY-79r3_P7Nc_IT7g6dUqIG0vWaPFxyUc2cFfYGTBZczEYiANjeG-qkql4zlVz1ba2p4kJd4JvHK7OGuMT-qlL4IlqB4dIzUGr1NMkAXmYeSjcidVE97vy_6RZSjFM9JH","expirationTime":null,"keys":{"p256dh":"BGrrtaGDyFlYHy60HFDQU8QRgSK-DHPmIUrjpr7x5et9XjnanLOqu4ILlWokzNO50ERYCNY0EP4lKCw9aC-iPTs","auth":"TS5EtdpYGkEJ7XpeilTnlA"}};
+let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/cmcfA2S8wxA:APA91bHM9zLc8bKrUG2wbqU06elydTRmRGV-lQlW0D8gf6-WsD0gOdPsrVqtT-gdZLXV6UGrkq8I_2hoZu2AUhcmWOzMVfjPQm-O0oGJggTqMXgV27GSiL8gzmJpVx1jNM6sB1J4imEq","expirationTime":null,"keys":{"p256dh":"BCM3vNB8aD0D_LPUPbJ1u5zGiVCUFUbHrur7iv0Fk1vuAvP4d4q3oUS4GGEOtJCza0UGzDi33Dgm6ZB70TIvWe8","auth":"hBjXMXHK97nrqM0iOOBICw"}};
 
 push.sendNotification(sub, 'test message');
