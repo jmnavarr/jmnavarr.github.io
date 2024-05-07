@@ -3,5 +3,9 @@ self.addEventListener('push', (e) => {
     const obj = e.data.json();
     console.log("obj", obj);
 
-    self.registration.showNotification(obj.body, {});
+    const options = {
+        body: obj.body
+    };
+
+    self.registration.showNotification(obj.title, options);
 });
