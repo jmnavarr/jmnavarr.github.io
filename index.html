@@ -41,6 +41,9 @@ Github Pages Repo
         });
     }
 
+    navigator.serviceWorker.addEventListener('message', event => {
+        console.log("Message from SW : ", event.data);
+    });
 </script>
 
 </body>
