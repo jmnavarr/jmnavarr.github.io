@@ -11,8 +11,7 @@ self.addEventListener('push', (e) => {
         body: obj.body
     };
 
-    //self.registration.showNotification(obj.title, options);
-    const res = self.registration.showNotification(obj.body, {});
+    const res = self.registration.showNotification(obj.title, options);
 
     e.waitUntil(res);
 });
