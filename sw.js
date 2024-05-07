@@ -1,3 +1,7 @@
+self.addEventListener('install', () => {
+    self.skipWaiting();
+});
+
 self.addEventListener('push', (e) => {
     console.log("received", e);
     const obj = e.data.json();
@@ -8,5 +12,7 @@ self.addEventListener('push', (e) => {
     };
 
     //self.registration.showNotification(obj.title, options);
-    self.registration.showNotification(obj.body, {});
+    const res = self.registration.showNotification(obj.body, {});
+
+    e.waitUntil(res);
 });
