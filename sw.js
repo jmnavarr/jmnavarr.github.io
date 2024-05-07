@@ -8,6 +8,9 @@ self.addEventListener('push', (e) => {
     console.log("obj", obj);
 
     const options = {
+        actions: [
+            { action: "view", title: "View" }
+        ],
         body: obj.body,
         icon: 'https://placehold.co/100x100',
         data: {
@@ -23,5 +26,7 @@ self.addEventListener('push', (e) => {
 self.addEventListener('notificationclick', (e) => {
     let payload = e.notification.data;
 
-    clients.openWindow(payload.url);
+    if(e.action === 'view') {
+        clients.openWindow(payload.url);
+    }
 });
