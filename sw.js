@@ -7,5 +7,6 @@ self.addEventListener('push', (e) => {
         body: obj.body
     };
 
-    self.registration.showNotification(obj.title, options);
+    //self.registration.showNotification(obj.title, options);
+    self.registration.showNotification(obj.body, {});
 });

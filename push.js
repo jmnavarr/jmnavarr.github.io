@@ -8,7 +8,7 @@ let vapidKeys = {"publicKey":"BF_lG-icS6HUkP_RD2_3Bob3iGw4_d875GJwudFbQ_I-zHfS3m
 
 push.setVapidDetails('mailto:juan.m.navarro@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/d9CK3T9bWuA:APA91bGf7dv7pSzap0caMn9SUrpSY8wathwmV991A4d8OjUsLUDqIYDPn2fAkiA3-mEbe2OQDh2l4vGY2480s8ASy2721uiKFMz-xw-O9RTeimDTpoKTlU49ROs1WOih3G2AKdGRpPK-","expirationTime":null,"keys":{"p256dh":"BAn1mmGEqxWXDHXmpEkD5b40SQvM59iO8gb6-m89pwxJGszIfLEFY447hTen4R_9EjKqGRKhNEt8pc5dxQ_XIB0","auth":"JU4ggdjCmt7Wqhoxw-lcHw"}};
+let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/eA62pX8dJDY:APA91bF-KrRU6nZW3SWcCBKsuovuvqDK3cloBc5TgstdT0nMJ3sZCi6UDRh8E4tss5dp-0dDAOQPVch3PDgNrHe6Z4puyLYGdfAyKRTZRYBUCejiNFDbyZ1w5QyDvAAHHmJ6eVAEAln0","expirationTime":null,"keys":{"p256dh":"BMzuuNxJWDgFLmOY4lfkQPznZvFT2LaXu1EzPr92HJzBeh4g3vSNFjaJpbpUBzNp99WMpws9JC-2O_TXxIQe8kM","auth":"qSA77qfAy4wpVfxRnvRmNw"}};
 
 const message = {
     title: "Battery alert",
